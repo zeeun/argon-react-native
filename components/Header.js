@@ -3,6 +3,8 @@ import { withNavigation } from '@react-navigation/compat';
 import { TouchableOpacity, StyleSheet, Platform, Dimensions } from 'react-native';
 import { Button, Block, NavBar, Text, theme } from 'galio-framework';
 
+
+import ImagePicker from './ImagePicker';
 import Icon from './Icon';
 import Input from './Input';
 import Tabs from './Tabs';
@@ -131,6 +133,7 @@ class Header extends React.Component {
           </Block>
         </Button>
         <Button shadowless style={styles.tab} onPress={() => navigation.navigate('Pro')}>
+          <ImagePicker/>
           <Block row middle>
             <Icon size={16} name="bag-17" family="ArgonExtra" style={{ paddingRight: 8 }} color={argonTheme.COLORS.ICON}/>
             <Text size={16} style={styles.tabTitle}>{optionRight || 'Fashion'}</Text>
